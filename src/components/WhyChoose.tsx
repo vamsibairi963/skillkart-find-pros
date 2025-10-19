@@ -5,6 +5,7 @@ const benefits = [
     icon: Shield,
     title: "Verified Professionals",
     description: "Every professional is thoroughly vetted and background-checked for your safety.",
+    highlighted: true,
   },
   {
     icon: MousePointerClick,
@@ -42,9 +43,25 @@ const WhyChoose = () => {
             return (
               <div
                 key={index}
-                className="group text-center space-y-4 p-6 rounded-xl hover:bg-secondary/50 transition-all duration-300"
+                className={`group text-center space-y-4 p-6 rounded-xl transition-all duration-300 relative ${
+                  benefit.highlighted 
+                    ? "bg-primary/5 border-2 border-primary shadow-lg hover:shadow-xl" 
+                    : "hover:bg-secondary/50"
+                }`}
               >
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                {benefit.highlighted && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <span className="bg-accent text-white px-3 py-1 rounded-full text-xs font-bold shadow-md">
+                      MOST POPULAR
+                    </span>
+                  </div>
+                )}
+                
+                <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl transition-colors ${
+                  benefit.highlighted 
+                    ? "bg-primary/20 group-hover:bg-primary/30" 
+                    : "bg-primary/10 group-hover:bg-primary/20"
+                }`}>
                   <Icon className="w-10 h-10 text-primary" />
                 </div>
                 

@@ -29,9 +29,17 @@ const Hero = () => {
           {/* Left content */}
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
+              <div className="inline-block mb-4">
+                <span className="bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold border border-accent/30 animate-pulse">
+                  🎉 Now Launching - Join Early!
+                </span>
+              </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                 Find Trusted Local{" "}
-                <span className="text-primary">Professionals</span>, Instantly.
+                <span className="relative">
+                  <span className="text-primary">Professionals</span>
+                  <span className="absolute -bottom-2 left-0 right-0 h-3 bg-accent/30 -z-10 rounded"></span>
+                </span>, Instantly.
               </h1>
               <p className="text-lg sm:text-xl text-muted-foreground max-w-xl">
                 SkillKartHub connects you with verified plumbers, tutors, trainers, and more. 

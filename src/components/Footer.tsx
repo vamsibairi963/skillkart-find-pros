@@ -1,5 +1,5 @@
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
-import logo from "@/assets/skillkart-logo.png";
+import logo from "@/assets/skillkart-logo-official.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
