@@ -30,9 +30,9 @@ const Navigation = () => {
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          <div className="flex-shrink-0">
-            <img src={logo} alt="SkillKartHub Logo" className="h-10 lg:h-12" />
+        <div className="flex items-center justify-between h-20 lg:h-24">
+          <div className="flex-shrink-0 transform hover:scale-105 transition-transform duration-300">
+            <img src={logo} alt="SkillKartHub Logo" className="h-14 lg:h-16 drop-shadow-lg" />
           </div>
 
           {/* Desktop Navigation */}

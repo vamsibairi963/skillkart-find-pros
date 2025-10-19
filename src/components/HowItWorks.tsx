@@ -20,13 +20,16 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="py-20 bg-secondary/30">
+    <section className="py-24 bg-gradient-to-b from-secondary/30 to-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+        <div className="text-center mb-20 space-y-4">
+          <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+            SIMPLE PROCESS
+          </span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold">
             How It Works
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Finding trusted help is as easy as 1-2-3
           </p>
         </div>
@@ -39,18 +42,18 @@ const HowItWorks = () => {
                 key={index}
                 className="relative group"
               >
-                <div className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-border">
-                  <div className="absolute -top-6 left-8 bg-primary text-primary-foreground w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-lg">
+                <div className="bg-gradient-to-br from-card to-card/80 rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 border-2 border-border hover:border-primary/30">
+                  <div className="absolute -top-8 left-10 bg-gradient-to-br from-primary to-primary/80 text-white w-16 h-16 rounded-2xl flex items-center justify-center font-extrabold text-2xl shadow-2xl transform -rotate-3 group-hover:rotate-0 transition-transform">
                     {index + 1}
                   </div>
                   
-                  <div className="mt-4 space-y-4">
-                    <div className="bg-primary/10 w-16 h-16 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Icon className="w-8 h-8 text-primary" />
+                  <div className="mt-6 space-y-5">
+                    <div className="bg-gradient-to-br from-primary/10 to-primary/5 w-20 h-20 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all shadow-md">
+                      <Icon className="w-10 h-10 text-primary" />
                     </div>
                     
-                    <h3 className="text-2xl font-bold">{step.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <h3 className="text-2xl font-extrabold">{step.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed text-lg">
                       {step.description}
                     </p>
                   </div>

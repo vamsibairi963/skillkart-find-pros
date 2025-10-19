@@ -19,11 +19,14 @@ const TeamSection = () => {
   return (
     <section id="team" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+        <div className="text-center mb-20 space-y-4">
+          <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-semibold mb-4">
+            OUR TEAM
+          </span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold">
             Meet Our <span className="text-primary">Founding Team</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             The passionate minds behind SkillKartHub
           </p>
         </div>
@@ -32,21 +35,21 @@ const TeamSection = () => {
           {team.map((member, index) => (
             <div
               key={index}
-              className="group bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-border text-center"
+              className="group bg-gradient-to-br from-card to-card/80 rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 border-2 border-border hover:border-primary/30 text-center"
             >
               {/* Avatar placeholder */}
-              <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-4xl font-bold text-white shadow-lg">
+              <div className="w-36 h-36 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary via-primary/80 to-accent flex items-center justify-center text-4xl font-extrabold text-white shadow-2xl ring-4 ring-primary/20 group-hover:scale-110 transition-transform">
                 {member.name.split(' ').map(n => n[0]).slice(0, 2).join('')}
               </div>
               
-              <h3 className="text-xl font-bold mb-3">{member.name}</h3>
+              <h3 className="text-2xl font-extrabold mb-4">{member.name}</h3>
               
               <a
                 href={`mailto:${member.email}`}
-                className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors bg-secondary/50 px-4 py-2 rounded-full"
               >
                 <Mail className="w-4 h-4" />
-                <span className="text-sm">{member.email}</span>
+                <span className="text-sm font-medium">{member.email}</span>
               </a>
             </div>
           ))}

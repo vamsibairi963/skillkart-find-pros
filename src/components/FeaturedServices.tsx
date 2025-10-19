@@ -44,11 +44,14 @@ const FeaturedServices = () => {
   return (
     <section id="services" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+        <div className="text-center mb-20 space-y-4">
+          <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
+            OUR SERVICES
+          </span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold">
             Featured Services
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Explore our most popular service categories
           </p>
         </div>
@@ -59,18 +62,18 @@ const FeaturedServices = () => {
             return (
               <div
                 key={index}
-                className="group bg-card rounded-xl p-6 lg:p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-border"
+                className="group bg-gradient-to-br from-card to-card/80 rounded-2xl p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-border hover:border-primary/30"
               >
-                <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl ${service.color} mb-4`}>
-                  <Icon className="w-7 h-7" />
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl ${service.color} mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all shadow-md`}>
+                  <Icon className="w-9 h-9" />
                 </div>
                 
-                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
+                <h3 className="text-2xl font-extrabold mb-3">{service.title}</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed text-base">
                   {service.description}
                 </p>
                 
-                <Button variant="ghost" className="group-hover:text-primary p-0 h-auto font-semibold">
+                <Button variant="ghost" className="group-hover:text-primary p-0 h-auto font-bold text-base">
                   Learn More →
                 </Button>
               </div>
